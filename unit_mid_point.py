@@ -13,8 +13,14 @@ res = 100
 w = np.arange(0,res)
 unit_circle = np.exp(2.0*np.pi*w*1j/res)
 
-start = np.random.randint(0,N)
-start_point = points[start]
+pick = np.random.randint(0,N)
+pick_point = points[pick]
+
+start = 0.1 +0.5j
+
+#compute mid point
+vector = (pick_point - start)/2.0
+new_point = start + vector 
 
 print(start)
 
@@ -22,7 +28,8 @@ print(start)
 
 plt.plot(np.real(unit_circle),np.imag(unit_circle),'b-')
 plt.plot(np.real(points),np.imag(points),'r.')
-plt.plot(np.real(start_point),np.imag(start_point), "g.")
-
+plt.plot(np.real(pick_point),np.imag(pick_point), "g.")
+plt.plot(np.real(start),np.imag(start), "y.")
+plt.plot(np.real(new_point),np.imag(new_point), "m.")
 plt.show()
 print("End")
