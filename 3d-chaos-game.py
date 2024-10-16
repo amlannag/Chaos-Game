@@ -41,7 +41,7 @@ ax.plot(points_3d[:, 0], points_3d[:, 1], points_3d[:, 2], 'ro')
 
 # Iterate and plot points
 next_point = start
-for iteration in range(5000):
+for iteration in range(2000):
     next_point = compute_new_rand_location(next_point)
     ax.plot([next_point[0]], [next_point[1]], [next_point[2]], "b.")
 

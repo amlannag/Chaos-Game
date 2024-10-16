@@ -3,7 +3,7 @@
 import numpy as np 
 import matplotlib.pyplot as plt
 
-N = 3
+N = 100
 
 r = np.arange(0,N)
 points = np.exp(2.0*np.pi*1j*r/N)

@@ -3,13 +3,13 @@
 import numpy as np 
 import matplotlib.pyplot as plt
 
-N = 6
+N = 3
 
 r = np.arange(0,N)
 points = np.exp(2.0*np.pi*1j*r/N)
 print(points)
 
-res = 100
+res = 1000
 w = np.arange(0,res)
 unit_circle = np.exp(2.0*np.pi*w*1j/res)
 
@@ -28,7 +28,7 @@ plt.plot(np.real(unit_circle),np.imag(unit_circle),'b-')
 plt.plot(np.real(points),np.imag(points),'r.')
 
 next_point = start
-for iteraetion in range(2000):
+for iteraetion in range(100):
     next_point, rand_location = computer_new_rand_location(next_point)
     plt.plot(np.real(next_point),np.imag(next_point),"b.")
 
